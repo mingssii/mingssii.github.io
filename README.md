@@ -1,6 +1,6 @@
-# mingssii2.github.io
+# mingssii.github.io
 
-Landing page for my apps and GitHub work: https://mingssii2.github.io
+Landing page for my apps and GitHub work: https://mingssii.github.io
 
 - **Hero**: fixed value proposition with a real app screenshot and direct app/Skills actions; no autoplay carousel.
 - **Featured apps**: task-led copy and real screenshots in `index.html`; product limitations remain visible.

@@ -1,4 +1,4 @@
-const USER = 'mingssii2';
+const USER = 'mingssii';
 const API = `https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`;
 const CACHE_KEY = 'hub-repos-v1';
 const CACHE_MS = 10 * 60 * 1000; // unauthenticated API allows 60 requests/hour per visitor
@@ -10,16 +10,20 @@ const CURATED = {
     description: 'สุ่มตัวเลือก ปรับน้ำหนัก และแชร์ชุดตัวเลือกให้ทีม เหมาะกับกิจกรรมหรือการตัดสินใจเล็ก ๆ' },
   'pad-flow-cleaner': { title: 'PAD Flow Cleaner', thumb: 'assets/shot-pad.jpg',
     description: 'อ่าน Power Automate Desktop flow เป็นภาพ พร้อมสรุปขั้นตอนและข้อความฉบับย่อก่อนส่งต่อ' },
+  'daily-dashboard': { title: 'Daily Dashboard',
+    description: 'แดชบอร์ดการเงินและโภชนาการบน Google Apps Script + Sheets พร้อม iOS Medium Widget (ข้อมูลจำลอง)' },
 };
 const HIDDEN = new Set([`${USER}.github.io`]);
 
 // Shown while the API loads, or if it is unreachable / rate-limited.
 const SNAPSHOT = [
-  { name: 'wheel', language: 'JavaScript', pushed_at: '2026-10-18T04:31:48Z', has_pages: true, homepage: null, description: '' },
-  { name: 'pad-flow-cleaner', language: 'HTML', pushed_at: '2026-10-16T10:21:16Z', has_pages: true, homepage: 'https://mingssii2.github.io/pad-flow-cleaner/', description: '' },
+  { name: 'daily-dashboard', language: 'HTML', pushed_at: '2026-11-05T02:45:00Z', has_pages: true, homepage: 'https://mingssii.github.io/daily-dashboard/', description: 'Unified Personal Life Dashboard (Finance & Nutrition) — Warm Paper UI, Scalable Sidebar & iOS Medium Widget' },
+  { name: 'wheel', language: 'JavaScript', pushed_at: '2026-10-18T04:31:48Z', has_pages: true, homepage: 'https://mingssii.github.io/wheel/', description: '' },
+  { name: 'pad-flow-cleaner', language: 'HTML', pushed_at: '2026-10-16T10:21:16Z', has_pages: true, homepage: 'https://mingssii.github.io/pad-flow-cleaner/', description: '' },
   { name: 'stock-dtw-lower-bound-evaluation', language: 'Python', pushed_at: '2026-04-22T15:21:31Z', has_pages: false, homepage: null,
     description: 'Reproducible DTW lower-bound evaluation for stock time-series similarity search' },
-  { name: 'data-science-test', language: 'Python', pushed_at: '2026-02-12T20:38:14Z', has_pages: false, homepage: null, description: 'Personal test' },
+  { name: 'data-science-test', language: 'Python', pushed_at: '2026-02-12T20:38:14Z', has_pages: false, homepage: null,
+    description: 'Retail promotion analysis in Python: incremental lift, post-promotion dip, cannibalization and profitability' },
 ];
 
 const LANG_VAR = { JavaScript: '--lang-js', HTML: '--lang-html', Python: '--lang-py', TypeScript: '--lang-ts' };

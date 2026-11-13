@@ -1,6 +1,6 @@
 # Skills I build & refine
 
-Reusable AI workflows by mingssii2, developed and refined with AI assistance. Experimental public previews under [MIT](LICENSE).
+Reusable AI workflows by mingssii, developed and refined with AI assistance. Experimental public previews under [MIT](LICENSE).
 
 | Skill | What it helps with |
 |---|---|
@@ -21,4 +21,4 @@ See [evaluation methodology](EVALUATION.md) and [scoped evidence](evidence.json)
 ## Feedback and license
 Open an issue in this repository with skill/version, host, sanitized input, expected result and actual result. Keep credentials, personal data and internal project content out of issues. To remove a skill, disable/remove its named folder with the host's supported controls.
 
-Copyright (c) 2026 mingssii2. MIT applies to this skills directory and the LICENSE included in each ZIP; it does not relicense the rest of the website or linked third-party materials.
+Copyright (c) 2026 mingssii. MIT applies to this skills directory and the LICENSE included in each ZIP; it does not relicense the rest of the website or linked third-party materials.

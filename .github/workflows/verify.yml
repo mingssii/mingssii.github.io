@@ -1,0 +1,25 @@
+name: Verify Site & Prompts
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run prompt copy tests
+        run: node tests/copy-prompts.mjs
+      - name: Check brand consistency and assets
+        run: |
+          test -f assets/avatar.jpg
+          if grep -rn "mingssii2" index.html app.js README.md skills/README.md; then
+            echo "Found legacy mingssii2 reference"
+            exit 1
+          fi
